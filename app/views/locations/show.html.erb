@@ -1,7 +1,7 @@
 <h1>City: <%=@location.title %> - <%=@location.subtitle %></h1>
 <p>Description: <p>
 <br>
-<p><strong>Picture:</strong><%= image_tag(@location.image, width:100) %> <p>
+<p><strong>Picture:</strong><%= image_tag(@location.header_image, width:100) %> <p>
 <br>
 <hr>
 <%=link_to "Edit this location", edit_location_path(@location)%>

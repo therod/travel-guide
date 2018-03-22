@@ -13,7 +13,6 @@ class LocationsController < ApplicationController
   end
 
   def create
-    location_params = params.require(:location).permit(:title, :subtitle, :header_image)
     @location = Location.new(location_params)
 
     if @location.save
@@ -29,7 +28,6 @@ class LocationsController < ApplicationController
 
   def update
     @location = Location.find(params[:id])
-    location_params = params.require(:location).permit(:title, :subtitle, :header_image)
     if @location.update(location_params)
       redirect_to location_path(@location), notice: "Location was successfully updated!"
     else
@@ -39,7 +37,7 @@ class LocationsController < ApplicationController
 
 private
 
-def location_params
+    def location_params
       params.require(:location).permit(:title, :subtitle, :header_image, :description)
     end
 

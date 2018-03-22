@@ -7,7 +7,7 @@
     <h2> City: <%= link_to location.title, location_path(location.id)%></h2>
     <p> Subtitle: <%=location.subtitle%></p>
     <p> Description:</p>
-    <p>Picture: <%= image_tag(location.image_header, width:80) %>  </p>
+    <p>Picture: <%= image_tag(location.header_image, width:80) %>  </p>
   </div>
   <hr/>
   <% end %>
